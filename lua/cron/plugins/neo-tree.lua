@@ -19,6 +19,19 @@ return {
         mappings = {
           ['\\'] = 'close_window',
         },
+        filtered_items = {
+          visible = false, -- hide filtered items on open
+          hide_gitignored = true,
+          hide_dotfiles = false,
+          hide_by_name = {
+            '.github',
+            '.changeset',
+            '.prettierrc.json',
+          },
+          never_show = { '.git' },
+        },
+        follow_current_file = true, -- optional, jumps to current file
+        use_libuv_file_watcher = true, -- auto-refresh when files change
       },
     },
   },
